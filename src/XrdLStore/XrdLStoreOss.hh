@@ -38,7 +38,7 @@
 class XrdLStoreOss : public XrdOss {
 public:
   XrdLStoreOss(const char *, XrdSysError &);
-  virtual ~XrdLstoreOss();
+  virtual ~XrdLStoreOss();
 
   int Configure(const char *, XrdSysError &);
 
