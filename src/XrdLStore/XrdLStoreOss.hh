@@ -58,4 +58,30 @@ public:
 
 };
 
+class XrdLStoreOssDF : public XrdOssDF {
+public:
+
+  XrdLStoreOssDF(XrdLStoreOss *lstoreoss);
+  virtual ~XrdLStoreOssDir() {};
+
+  // Directory-oriented operations
+  virtual int Opendir(const char *, XrdOucEnv &);
+  virtual int Readdir(char *buff, int blen);
+  virtual int Close(long long *retsz=0);
+
+  //File-oriented operations
+  virtual int Open(const char *path, int flags, mode_t mode, XrdOucEnv &env);
+  virtual int Close(long long *retsz=0);
+  virtual ssize_t Read(off_t offset, size_t blen);
+  virtual ssize_t Read(void *buff, off_t offset, size_t blen);
+  virtual int     Read(XrdSfsAio *aiop);
+  virtual ssize_t ReadRaw(void *, off_t, size_t);
+  virtual int Fstat(struct stat *buff);
+  virtual ssize_t Write(const void *buff, off_t offset, size_t blen);
+  virtual int Write(XrdSfsAio *aiop);
+  virtual int Fsync(void);
+  virtual int Ftruncate(unsigned long long);
+
+}
+
 #endif /* __LSTORE_OSS_HH__ */
