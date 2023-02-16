@@ -83,12 +83,69 @@ int XrdCephOss::Configure(const char *configfn, XrdSysError &Eroute) {
   return NoGo;
 }
 
+int XrdLStoreOss::Chmod(const char *path, mode_t mode, XrdOucEnv *envP) {
+  // TODO: Implement
+  return -ENOTSUP;
+}
+
+int XrdLStoreOss::Create(const char *tident, const char *path, mode_t access_mode,
+                    XrdOucEnv &env, int Opts) {
+  // TODO: Implement
+  return -ENOTSUP;
+}
+
 int XrdLStoreOss::Init(XrdSysLogger *logger, const char* configFn) {
   // Eventually init LStore connection here???
   return 0;
 }
 
+
 int XrdLStoreOss::Mkdir(const char *path, mode_t mode, int mkpath, XrdOucEnv *envP) {
-  // Figure out how to call the posix function properly for now
-  return 0;
+  // TODO: Implement
+  return -ENOTSUP;
+}
+
+int XrdLStoreOss::Remdir(const char *path, int Opts, XrdOucEnv *eP) {
+  // TODO: Implement
+  return -ENOTSUP;
+} 
+
+int XrdLStoreOss::Rename(const char *from, const char *to,
+                    XrdOucEnv *eP1, XrdOucEnv *eP2) {
+  // TODO: Implement
+  return -ENOTSUP;
+}
+
+int XrdLStoreOss::Stat(const char *, struct stat *, int opts=0, XrdOucEnv *eP=0) {
+  // TODO: Implement
+  return -ENOTSUP;
+}
+
+int XrdLStoreOss::StatFS(const char *path, char *buff, int &blen, XrdOucEnv *eP) {
+  // TODO: Implement
+  return -ENOTSUP;
+}
+
+int XrdLStoreOss::StatVS(XrdOssVSInfo *sP, const char *sname, int updt) {
+  // TODO: Implement
+  return -ENOTSUP;
+}
+
+int XrdLStoreOss::Truncate (const char* path, unsigned long long size,
+                          XrdOucEnv* env) {
+  // TODO: Implement
+  return -ENOTSUP;
+}
+
+int XrdLStoreOss::Unlink(const char *path, int Opts, XrdOucEnv *env) {
+  // TODO: Implement
+  return -ENOTSUP;
+}
+
+XrdOssDF* XrdLStoreOss::newDir(const char *tident) {
+  return new XrdLStoreOssDF(this);
+}
+
+XrdOssDF* XrdCephOss::newFile(const char *tident) {
+  return new XrdLStoreOssDF(this);
 }
