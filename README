@@ -35,7 +35,7 @@
 
   * Ensure that the correct plugin version number is set in cmake/XRootDDefaults.cmake: 
  
-    if( NOT XRDCEPH_SUBMODULE )
+    if( NOT XRDLSTORE_SUBMODULE )
       define_default( PLUGIN_VERSION  5 )
     endif()
 
