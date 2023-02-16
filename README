@@ -9,9 +9,10 @@
 --------------------------------------------------------------------------------
 
 0. xrootd-lstore is a OSS layer XRootD plug-in for interfacing with LStore logistical 
-   storage system.
+   storage system. This plugin must be built against a respective (?) LStore version
+   (we think), the repo can be found at:
 
-   TODO: Add LStore repo details and link
+   https://github.com/accre/lstore
 
 1. S U P P O R T E D   O P E R A T I N G   S Y S T E M S
 
