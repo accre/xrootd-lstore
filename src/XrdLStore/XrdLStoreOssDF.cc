@@ -15,3 +15,33 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with XRootD.  If not, see <http://www.gnu.org/licenses/>.
 //------------------------------------------------------------------------------
+
+#include "XrdCeph/XrdLStoreOssDF.hh"
+#include "XrdSys/XrdSysError.hh"
+#include "XrdOuc/XrdOucTrace.hh"
+
+XrdLStoreOssDF::XrdLStoreOssDF(XrdLStoreOss *cephOss) {}
+
+//------------------------------------------------------------------------------
+// Directory based methods
+//------------------------------------------------------------------------------
+
+int XrdLStoreOssDF::Opendir(const char *path, XrdOucEnv &env) {
+  // TODO: Implement
+  return -ENOTSUP;
+}
+
+int XrdLStoreOssDF::Readdir(char *buff, int blen) {
+  // TODO: Implement
+  return -ENOTSUP;
+}
+
+int XrdLStoreOssDF::Close(long long *retsz) {
+  // TODO: Implement
+  return -ENOTSUP;
+}
+
+
+//------------------------------------------------------------------------------
+// File based methods
+//------------------------------------------------------------------------------
