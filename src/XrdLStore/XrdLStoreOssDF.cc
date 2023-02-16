@@ -45,3 +45,58 @@ int XrdLStoreOssDF::Close(long long *retsz) {
 //------------------------------------------------------------------------------
 // File based methods
 //------------------------------------------------------------------------------
+
+int XrdCephOssFile::Open(const char *path, int flags, mode_t mode, XrdOucEnv &env) {
+  // TODO: Implement
+  return -ENOTSUP;
+}
+
+int XrdCephOssFile::Close(long long *retsz) {
+  // TODO: Implement
+  return -ENOTSUP;
+}
+
+ssize_t XrdCephOssFile::Read(off_t offset, size_t blen) {
+  // TODO: Implement
+  return -ENOTSUP;
+}
+
+ssize_t XrdLStoreOssDF::Read(void *buff, off_t offset, size_t blen) {
+  // TODO: Implement
+  return -ENOTSUP;
+}
+
+int XrdLStoreOssDF::Read(XrdSfsAio *aiop) {
+  // TODO: Implement
+  return -ENOTSUP;
+}
+
+ssize_t XrdLStoreOssDF::ReadRaw(void *buff, off_t offset, size_t blen) {
+  // TODO: Implement
+  return -ENOTSUP;
+}
+
+int XrdLStoreOssDF::Fstat(struct stat *buff) {
+  // TODO: Implement
+  return -ENOTSUP;
+}
+
+ssize_t XrdLStoreOssDF::Write(const void *buff, off_t offset, size_t blen) {
+  // TODO: Implement
+  return -ENOTSUP;
+}
+
+int XrdLStoreOssDF::Write(XrdSfsAio *aiop) {
+  // TODO: Implement
+  return -ENOTSUP;
+}
+
+int XrdLStoreOssDF::Fsync() {
+  // TODO: Implement
+  return -ENOTSUP;
+}
+
+int XrdLStoreOssDF::Ftruncate(unsigned long long len) {
+  // TODO: Implement
+  return -ENOTSUP;
+}
