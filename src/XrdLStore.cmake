@@ -10,7 +10,8 @@ set( LIB_XRD_LSTORE XrdLStore-${PLUGIN_VERSION} )
 add_library(
   ${LIB_XRD_LSTORE}
   MODULE
-  XrdLStore/XrdLStoreOss.cc       XrdLStore/XrdLStoreOss.hh )
+  XrdLStore/XrdLStoreOss.cc       XrdLStore/XrdLStoreOss.hh 
+  XrdLStore/XrdLStoreOssDF.cc       XrdLStore/XrdLStoreOssDF.hh )
 
 target_link_libraries(
   ${LIB_XRD_LSTORE}
