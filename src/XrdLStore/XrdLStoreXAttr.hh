@@ -32,7 +32,7 @@
 //! In case one of the two only has a default, it will be applied for both plugins.
 //------------------------------------------------------------------------------
 
-class XrdLStoreXAttr : public XrdXAttr {
+class XrdLStoreXAttr : public XrdSysXAttr {
 public:
 
   XrdLStoreXAttr();
