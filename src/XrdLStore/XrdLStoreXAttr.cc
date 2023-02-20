@@ -58,7 +58,7 @@ int XrdLStoreXAttr::Del(const char *Aname, const char *Path, int fd) {
 
 void XrdLStoreXAttr::Free(AList *aPL) {
   // TODO: Implement
-  return -ENOTSUP;
+  return;
 }
 
 int XrdLStoreXAttr::Get(const char *Aname, void *Aval, int Avsz,
