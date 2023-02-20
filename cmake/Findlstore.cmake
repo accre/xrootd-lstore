@@ -6,7 +6,7 @@
 
 find_path(
   LSTORE_INCLUDE_DIR
-  todo/todo.hpp
+  lio/lio.h
   HINTS
   ${LSTORE_DIR}
   $ENV{LSTORE_DIR}
@@ -17,7 +17,7 @@ find_path(
 
 find_library(
   LSTORE_LIB
-  NAMES lstore
+  NAMES liblio.so
   HINTS
   ${LSTORE_DIR}
   $ENV{LSTORE_DIR}
