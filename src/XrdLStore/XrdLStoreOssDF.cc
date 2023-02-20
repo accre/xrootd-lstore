@@ -16,11 +16,11 @@
 // along with XRootD.  If not, see <http://www.gnu.org/licenses/>.
 //------------------------------------------------------------------------------
 
-#include "XrdCeph/XrdLStoreOssDF.hh"
+#include "XrdLStore/XrdLStoreOssDF.hh"
 #include "XrdSys/XrdSysError.hh"
 #include "XrdOuc/XrdOucTrace.hh"
 
-XrdLStoreOssDF::XrdLStoreOssDF(XrdLStoreOss *cephOss) {}
+XrdLStoreOssDF::XrdLStoreOssDF(XrdLStoreOss *lstoreOss) {}
 
 //------------------------------------------------------------------------------
 // Directory based methods
@@ -46,17 +46,17 @@ int XrdLStoreOssDF::Close(long long *retsz) {
 // File based methods
 //------------------------------------------------------------------------------
 
-int XrdCephOssFile::Open(const char *path, int flags, mode_t mode, XrdOucEnv &env) {
+int XrdLStoreOssFile::Open(const char *path, int flags, mode_t mode, XrdOucEnv &env) {
   // TODO: Implement
   return -ENOTSUP;
 }
 
-int XrdCephOssFile::Close(long long *retsz) {
+int XrdLStoreOssFile::Close(long long *retsz) {
   // TODO: Implement
   return -ENOTSUP;
 }
 
-ssize_t XrdCephOssFile::Read(off_t offset, size_t blen) {
+ssize_t XrdLStoreOssFile::Read(off_t offset, size_t blen) {
   // TODO: Implement
   return -ENOTSUP;
 }

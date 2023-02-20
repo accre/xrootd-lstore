@@ -32,7 +32,7 @@ set( LIB_XRD_LSTORE_XATTR XrdLStoreXattr-${PLUGIN_VERSION} )
 add_library(
   ${LIB_XRD_LSTORE_XATTR}
   MODULE
-  XrdCeph/XrdLStoreXAttr.cc   XrdCeph/XrdLStoreXAttr.hh )
+  XrdLStore/XrdLStoreXAttr.cc   XrdLStore/XrdLStoreXAttr.hh )
 
 target_link_libraries(
   ${LIB_XRD_LSTORE_XATTR}

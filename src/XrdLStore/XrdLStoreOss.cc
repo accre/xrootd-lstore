@@ -47,7 +47,7 @@ XrdLStoreOss::~XrdLStoreOss() {
 }
 
 
-int XrdCephOss::Configure(const char *configfn, XrdSysError &Eroute) {
+int XrdLStoreOss::Configure(const char *configfn, XrdSysError &Eroute) {
    int NoGo = 0;
 
    // If there is a config file, then read it
@@ -146,6 +146,6 @@ XrdOssDF* XrdLStoreOss::newDir(const char *tident) {
   return new XrdLStoreOssDF(this);
 }
 
-XrdOssDF* XrdCephOss::newFile(const char *tident) {
+XrdOssDF* XrdLStoreOss::newFile(const char *tident) {
   return new XrdLStoreOssDF(this);
 }

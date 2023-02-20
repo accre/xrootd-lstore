@@ -9,7 +9,7 @@ if( "${CMAKE_BUILD_TYPE}" STREQUAL "" )
   endif()
 endif()
 
-if( NOT XRDCEPH_SUBMODULE )
+if( NOT XRDLSTORE_SUBMODULE )
   define_default( PLUGIN_VERSION  5 )
 endif()
 
