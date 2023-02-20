@@ -36,7 +36,7 @@ class XrdLStoreXAttr : public XrdSysXAttr {
 public:
 
   XrdLStoreXAttr();
-  virtual ~XrdLStoreXAttr() {};
+  virtual ~XrdLStoreXAttr();
 
   virtual int Del(const char *Aname, const char *Path, int fd=-1);
 
