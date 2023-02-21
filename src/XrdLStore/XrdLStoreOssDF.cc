@@ -41,17 +41,17 @@ int XrdLStoreOssDF::Readdir(char *buff, int blen) {
 // File based methods
 //------------------------------------------------------------------------------
 
-int XrdLStoreOssFile::Open(const char *path, int flags, mode_t mode, XrdOucEnv &env) {
+int XrdLStoreOssDF::Open(const char *path, int flags, mode_t mode, XrdOucEnv &env) {
   // TODO: Implement
   return -ENOTSUP;
 }
 
-int XrdLStoreOssFile::Close(long long *retsz) {
+int XrdLStoreOssDF::Close(long long *retsz) {
   // TODO: Implement
   return -ENOTSUP;
 }
 
-ssize_t XrdLStoreOssFile::Read(off_t offset, size_t blen) {
+ssize_t XrdLStoreOssDF::Read(off_t offset, size_t blen) {
   // TODO: Implement
   return -ENOTSUP;
 }
