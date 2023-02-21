@@ -22,6 +22,8 @@
 
 #include <string>
 #include <XrdOss/XrdOss.hh>
+#include <XrdSys/XrdSysError.hh>
+#include <XrdOuc/XrdOucTrace.hh>
 
 //------------------------------------------------------------------------------
 //! This class implements XrdOss interface for usage with an LStore filesystem.
