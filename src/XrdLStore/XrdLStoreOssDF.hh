@@ -56,7 +56,7 @@ public:
   virtual int Fsync(void);
   virtual int Ftruncate(unsigned long long);
 
-}
+};
 
 
 #endif /* __XRD_LSTORE_OSS_DF_HH__ */
