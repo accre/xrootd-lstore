@@ -49,7 +49,7 @@ public:
 
   virtual int Set(const char *Aname, const void *Aval, int Avsz,
                   const char *Path,  int fd=-1,  int isNew=0);
-}
+};
 
 
 #endif /* __XRD_LSTORE_XATTR_HH__ */
