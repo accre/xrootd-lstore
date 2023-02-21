@@ -54,6 +54,7 @@ int XrdLStoreOss::Configure(const char *configfn, XrdSysError &Eroute) {
    XrdOucEnv myEnv;
    XrdOucStream Config(&Eroute, getenv("XRDINSTANCE"), &myEnv, "=====> ");
    if (configfn && *configfn) {
+     int cfgFD;
      if ((cfgFD = open(configfn, O_RDONLY, 0)) < 0) {
        Eroute.Emsg("Config", errno, "opening config file", configfn);
        return 1;
