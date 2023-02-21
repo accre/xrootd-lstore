@@ -33,6 +33,7 @@
 #endif
 #include "XrdVersion.hh"
 #include "XrdLStore/XrdLStoreOss.hh"
+#include "XrdLStore/XrdLStoreOssDF.hh"
 
 XrdVERSIONINFO(XrdOssGetStorageSystem, XrdLStoreOss);
 
@@ -117,7 +118,7 @@ int XrdLStoreOss::Rename(const char *from, const char *to,
   return -ENOTSUP;
 }
 
-int XrdLStoreOss::Stat(const char *, struct stat *, int opts=0, XrdOucEnv *eP=0) {
+int XrdLStoreOss::Stat(const char *, struct stat *, int opts, XrdOucEnv *eP) {
   // TODO: Implement
   return -ENOTSUP;
 }
