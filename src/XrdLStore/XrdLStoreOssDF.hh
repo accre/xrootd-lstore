@@ -37,12 +37,11 @@ class XrdLStoreOssDF : public XrdOssDF {
 public:
 
   XrdLStoreOssDF(XrdLStoreOss *lstoreoss);
-  virtual ~XrdLStoreOssDir() {};
+  virtual ~XrdLStoreOssDF() {};
 
   // Directory-oriented operations
   virtual int Opendir(const char *, XrdOucEnv &);
   virtual int Readdir(char *buff, int blen);
-  virtual int Close(long long *retsz=0);
 
   //File-oriented operations
   virtual int Open(const char *path, int flags, mode_t mode, XrdOucEnv &env);

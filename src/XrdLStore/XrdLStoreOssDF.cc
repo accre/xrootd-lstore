@@ -36,11 +36,6 @@ int XrdLStoreOssDF::Readdir(char *buff, int blen) {
   return -ENOTSUP;
 }
 
-int XrdLStoreOssDF::Close(long long *retsz) {
-  // TODO: Implement
-  return -ENOTSUP;
-}
-
 
 //------------------------------------------------------------------------------
 // File based methods
