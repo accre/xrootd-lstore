@@ -40,6 +40,21 @@ XrdVERSIONINFO(XrdOssGetStorageSystem, XrdLStoreOss);
 XrdSysError XrdLStoreEroute(0);
 XrdOucTrace XrdLStoreTrace(&XrdLStoreEroute);
 
+extern "C"
+{
+  XrdOss*
+  XrdOssGetStorageSystem(XrdOss* native_oss,
+                         XrdSysLogger* lp,
+                         const char* config_fn,
+                         const char* parms)
+  {
+    XrdLStoreEroute.SetPrefix("lstore_");
+    XrdLStoreEroute.logger(lp);
+    XrdLStoreEroute.Say("++++++ Vanderbilt University XrdLStore");
+    return new XrdLStoreOss(config_fn, XrdLStoreEroute);
+  }
+}
+
 XrdLStoreOss::XrdLStoreOss(const char *configfn, XrdSysError &Eroute) {
   Configure(configfn, Eroute);
 }
