@@ -135,11 +135,13 @@ int XrdLStoreOss::Rename(const char *from, const char *to,
 
 int XrdLStoreOss::Stat(const char *, struct stat *, int opts, XrdOucEnv *eP) {
   // TODO: Implement
+  XrdLStoreEroute.Say("Calling Stat");
   return -ENOTSUP;
 }
 
 int XrdLStoreOss::StatFS(const char *path, char *buff, int &blen, XrdOucEnv *eP) {
   // TODO: Implement
+  XrdLStoreEroute.Say("Calling StatFS");
   return -ENOTSUP;
 }
 

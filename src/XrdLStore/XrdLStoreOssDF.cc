@@ -16,11 +16,18 @@
 // along with XRootD.  If not, see <http://www.gnu.org/licenses/>.
 //------------------------------------------------------------------------------
 
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+
 #include "XrdLStore/XrdLStoreOssDF.hh"
 #include "XrdSys/XrdSysError.hh"
 #include "XrdOuc/XrdOucTrace.hh"
 
-XrdLStoreOssDF::XrdLStoreOssDF(XrdLStoreOss *lstoreOss) {}
+extern XrdSysError XrdLStoreEroute;
+
+XrdLStoreOssDF::XrdLStoreOssDF(XrdLStoreOss *lstoreOss) : m_fd(-1) {}
 
 //------------------------------------------------------------------------------
 // Directory based methods
@@ -42,8 +49,9 @@ int XrdLStoreOssDF::Readdir(char *buff, int blen) {
 //------------------------------------------------------------------------------
 
 int XrdLStoreOssDF::Open(const char *path, int flags, mode_t mode, XrdOucEnv &env) {
-  // TODO: Implement
-  return -ENOTSUP;
+  XrdLStoreEroute.Say("Opening a file...");
+  m_fd = open(path, flags);
+  return XrdOssOK;
 }
 
 int XrdLStoreOssDF::Close(long long *retsz) {
@@ -53,31 +61,35 @@ int XrdLStoreOssDF::Close(long long *retsz) {
 
 ssize_t XrdLStoreOssDF::Read(off_t offset, size_t blen) {
   // TODO: Implement
+  XrdLStoreEroute.Say("Calling the read without a buffer, what do I do here???");
   return -ENOTSUP;
 }
 
 ssize_t XrdLStoreOssDF::Read(void *buff, off_t offset, size_t blen) {
-  // TODO: Implement
-  return -ENOTSUP;
+  XrdLStoreEroute.Say("Reading (pread)...");
+  return pread(m_fd, buff, blen, offset);
 }
 
 int XrdLStoreOssDF::Read(XrdSfsAio *aiop) {
   // TODO: Implement
+  XrdLStoreEroute.Say("Calling the async read, what do I do here???");
   return -ENOTSUP;
 }
 
 ssize_t XrdLStoreOssDF::ReadRaw(void *buff, off_t offset, size_t blen) {
   // TODO: Implement
+  XrdLStoreEroute.Say("Calling the read raw, what do I do here???");
   return -ENOTSUP;
 }
 
 int XrdLStoreOssDF::Fstat(struct stat *buff) {
-  // TODO: Implement
-  return -ENOTSUP;
+  XrdLStoreEroute.Say("Calling FStat...");
+  return fstat(m_fd, buff);
 }
 
 ssize_t XrdLStoreOssDF::Write(const void *buff, off_t offset, size_t blen) {
   // TODO: Implement
+  XrdLStoreEroute.Say("Calling Write, what do I do here???");
   return -ENOTSUP;
 }
 
@@ -88,6 +100,7 @@ int XrdLStoreOssDF::Write(XrdSfsAio *aiop) {
 
 int XrdLStoreOssDF::Fsync() {
   // TODO: Implement
+  XrdLStoreEroute.Say("Calling FSync, what do I do here???");
   return -ENOTSUP;
 }
 
