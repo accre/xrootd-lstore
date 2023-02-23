@@ -55,8 +55,8 @@ int XrdLStoreOssDF::Open(const char *path, int flags, mode_t mode, XrdOucEnv &en
 }
 
 int XrdLStoreOssDF::Close(long long *retsz) {
-  // TODO: Implement
-  return -ENOTSUP;
+  XrdLStoreEroute.Say("Closing a file...");
+  return close(m_fd);
 }
 
 ssize_t XrdLStoreOssDF::Read(off_t offset, size_t blen) {

@@ -59,9 +59,31 @@ extern "C"
 
 XrdLStoreOss::XrdLStoreOss(const char *configfn, XrdSysError &Eroute) {
   Configure(configfn, Eroute);
+
+  int argc = 1;
+  char **argv;
+  char * xrootd_arg1 = (char*) "lio_xrootd";
+  argv = &xrootd_arg1;
+
+  XrdLStoreEroute.Say("Initializing LStore connection");
+  int result = lio_init(&argc, &argv);
+  if (result == 0) {
+      XrdLStoreEroute.Say("LStore Init OK");
+  } else {
+      XrdLStoreEroute.Say("LStore Init Failed");
+
+  }
 }
 
 XrdLStoreOss::~XrdLStoreOss() {
+  int result = -1;
+  result = lio_shutdown();
+  if (result == 0) {
+      XrdLStoreEroute.Say("LStore Shutdown OK");
+  } else {
+      XrdLStoreEroute.Say("LStore Shutdown Failed");
+
+  }
 }
 
 
@@ -114,7 +136,7 @@ int XrdLStoreOss::Create(const char *tident, const char *path, mode_t access_mod
 }
 
 int XrdLStoreOss::Init(XrdSysLogger *logger, const char* configFn) {
-  // Eventually init LStore connection here???
+  // Not sure when this even gets called
   return 0;
 }
 
