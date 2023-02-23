@@ -21,6 +21,8 @@
 #include <string>
 #include <fcntl.h>
 
+#include <lio/core.h>
+
 #include "XrdOuc/XrdOucEnv.hh"
 #include "XrdSys/XrdSysError.hh"
 #include "XrdOuc/XrdOucTrace.hh"

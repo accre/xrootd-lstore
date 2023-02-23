@@ -3,6 +3,8 @@
 #-------------------------------------------------------------------------------
 set( TRUE_VAR TRUE )
 component_status( LSTORE   TRUE_VAR        LSTORE_FOUND )
+component_status( APR      TRUE_VAR        APR_FOUND )
+component_status( ZMQ      TRUE_VAR        ZMQ_FOUND )
 component_status( XROOTD   TRUE_VAR        XROOTD_FOUND )
 component_status( TESTS    BUILD_TESTS     CPPUNIT_FOUND )
 
@@ -14,6 +16,8 @@ message( STATUS "Build type:        " ${CMAKE_BUILD_TYPE} )
 message( STATUS "Plug-in version:   " ${PLUGIN_VERSION} )
 message( STATUS "" )
 message( STATUS "LSTORE:            " ${STATUS_LSTORE} )
+message( STATUS "APR:               " ${STATUS_APR} )
+message( STATUS "ZEROMQ:            " ${STATUS_ZMQ} )
 message( STATUS "XRootD:            " ${STATUS_XROOTD} )
 message( STATUS "Tests:             " ${STATUS_TESTS} )
 message( STATUS "----------------------------------------" )

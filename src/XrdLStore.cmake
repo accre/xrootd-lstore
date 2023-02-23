@@ -1,5 +1,7 @@
 include_directories( ${XROOTD_INCLUDE_DIR} )
 include_directories( ${LSTORE_INCLUDE_DIR} )
+include_directories( ${APR_INCLUDE_DIR} )
+include_directories( ${ZMQ_INCLUDE_DIR} )
 include_directories( ${CMAKE_SOURCE_DIR}/src )
 
 #-------------------------------------------------------------------------------
@@ -16,6 +18,8 @@ add_library(
 target_link_libraries(
   ${LIB_XRD_LSTORE}
   ${XROOTD_LIBRARIES}
+  ${APR_LIBS}
+  ${ZMQ_LIBS}
   ${LSTORE_LIBS} )
 
 set_target_properties(

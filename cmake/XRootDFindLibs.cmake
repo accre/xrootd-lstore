@@ -4,6 +4,8 @@
 
 find_package( XRootD REQUIRED )
 
+find_package( apr REQUIRED )
+find_package( zmq REQUIRED )
 find_package( lstore REQUIRED )
 
 if( ENABLE_TESTS )
