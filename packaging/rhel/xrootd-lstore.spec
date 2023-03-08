@@ -80,7 +80,6 @@ make -i VERBOSE=1 %{?_smp_mflags}
 popd
 
 %install
-pushd xrootd-ceph
 pushd  build
 make install DESTDIR=%{buildroot}
 popd
