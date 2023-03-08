@@ -31,7 +31,9 @@
 #ifdef XRDLSTORE_SUBMODULE
 #include "XrdOuc/XrdOucN2NLoader.hh"
 #else
-#include "private/XrdOuc/XrdOucN2NLoader.hh"
+// TODO: figure out if we need this
+//#include "private/XrdOuc/XrdOucN2NLoader.hh"
+#include "XrdOuc/XrdOucN2NLoader.hh"
 #endif
 #include "XrdVersion.hh"
 #include "XrdLStore/XrdLStoreOss.hh"
