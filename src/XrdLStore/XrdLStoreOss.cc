@@ -28,13 +28,13 @@
 #include "XrdOuc/XrdOucTrace.hh"
 #include "XrdOuc/XrdOucStream.hh"
 #include "XrdOuc/XrdOucName2Name.hh"
-#ifdef XRDLSTORE_SUBMODULE
-#include "XrdOuc/XrdOucN2NLoader.hh"
-#else
 // TODO: figure out if we need this
+//#ifdef XRDLSTORE_SUBMODULE
+//#include "XrdOuc/XrdOucN2NLoader.hh"
+//#else
 //#include "private/XrdOuc/XrdOucN2NLoader.hh"
-#include "XrdOuc/XrdOucN2NLoader.hh"
-#endif
+//#include "XrdOuc/XrdOucN2NLoader.hh"
+//#endif
 #include "XrdVersion.hh"
 #include "XrdLStore/XrdLStoreOss.hh"
 #include "XrdLStore/XrdLStoreOssDF.hh"
