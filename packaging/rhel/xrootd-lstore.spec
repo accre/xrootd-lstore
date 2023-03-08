@@ -32,7 +32,7 @@ URL:		https://github.com/accre/xrootd-lstore
 
 # git clone http://github.com/accre/xrootd-lstore.git xrootd-lstore
 # cd xrootd-lstore
-# git-archive master | gzip -9 > ~/rpmbuild/SOURCES/xrootd-lstore.tar.gz
+# git archive main | gzip -9 > ~/rpmbuild/SOURCES/xrootd-lstore.tar.gz
 Source0: xrootd-lstore.tar.gz	
 
 BuildRoot: %{_tmppath}/%{name}-root
@@ -73,7 +73,6 @@ cmake3 \
 %else
 cmake  \
 %endif
-
        -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=RelWithDebInfo \
       ../
 

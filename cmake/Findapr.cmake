@@ -5,13 +5,13 @@
 # APR_FOUND
 
 find_path(
-  APR_INCLUDE_DIR
+  APR_INCLUDE_DIR apr.h
   HINTS
   ${APR_DIR}
   $ENV{APR_DIR}
   /usr
   /opt
-  PATH_SUFFIXES include
+  PATH_SUFFIXES include/apr-1
 )
 
 find_library(

@@ -5,7 +5,7 @@
 # ZMQ_FOUND
 
 find_path(
-  ZMQ_INCLUDE_DIR
+  ZMQ_INCLUDE_DIR zmq.h
   HINTS
   ${ZMQ_DIR}
   $ENV{ZMQ_DIR}
